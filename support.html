@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esc. | Support</title>
+    <link rel="icon" href="ESC.(1).png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            background-color: #1d1a20;
+            font-family: 'Righteous', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header img {
+        height: 80px;
+        margin-left: 40px;
+    }
+
+    header {
+        background-color: #0e0e0e;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 25px 0 black;
+        z-index: 1000; /* Ensure header is above other content */
+    }
+
+    header * {
+        display: inline;
+    }
+
+    header li {
+        margin: 20px;
+    }
+
+    header li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #c83d3d;
+    }
+
+    a { 
+        color: white; 
+        text-decoration: none;
+    }
+
+        main {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        .centered {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #c83d3d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #a32d2d;
+        }
+
+        footer {
+            background-color: #0e0e0e;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 -5px 10px 0 black;
+        }
+
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .faq h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .faq p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ESC.(3).png" alt="Esc. Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="social.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="centered">
+            <h1>Contact Us</h1>
+            <p><a href="mailto:esc.apethegamee@gmail.com">Email The Team</a></p>
+        </div>
+
+        <div class="centered">
+            <p id="myText">esc.apethegamee@gmail.com</p>
+            <button class="btn" onclick="copyContent()">Copy!</button>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3>How can I report a bug?</h3>
+                <p>You can report bugs by emailing us at <a href="mailto:esc.apethegamee@gmail.com">esc.apethegamee@gmail.com</a>.</p>
+            </div>
+            <div class="faq">
+                <h3>What platforms is the game available on?</h3>
+                <p>Esc. | The Game is available on PC, Mac, and mobile devices.</p>
+            </div>
+            <div class="faq">
+                <h3>How do I save my progress?</h3>
+                <p>The game automatically saves your progress. Make sure to be connected to the internet to ensure your progress is saved to the cloud.</p>
+            </div>
+            <div class="faq">
+                <h3>Can I play with friends?</h3>
+                <p>Yes, Esc. | The Game supports multiplayer mode. You can invite your friends to play together.</p>
+            </div>
+            <div class="faq">
+                <h3>Are there any in-game purchases?</h3>
+                <p>Yes, the game offers in-game purchases for cosmetic items and additional content. However, these purchases are optional and do not affect gameplay.</p>
+            </div>
+            <div class="faq">
+                <h3>How can I reset my account?</h3>
+                <p>If you need to reset your account, please contact our support team at <a href="mailto:esc.apethegamee@gmail.com">esc.apethegamee@gmail.com</a>.</p>
+            </div>
+            <div class="faq">
+                <h3>What are the system requirements for the game?</h3>
+                <p>The minimum system requirements are:
+                   <ul>
+                       <li>OS: Windows 10 / macOS 10.13</li>
+                       <li>Processor: Intel Core i5 or equivalent</li>
+                       <li>Memory: 8 GB RAM</li>
+                       <li>Graphics: NVIDIA GeForce GTX 660 or equivalent</li>
+                       <li>Storage: 10 GB available space</li>
+                   </ul>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Esc. | The Game. All rights reserved.
+    </footer>
+
+    <script>
+        const copyContent = async () => {
+            let text = document.getElementById('myText').innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                console.log('Content copied to clipboard');
+                alert('Email address copied to clipboard!');
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        }
+    </script>
+</body>
+</html>

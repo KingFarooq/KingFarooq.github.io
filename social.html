@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esc. | Socials</title>
+        <link rel="icon" href="ESC.(1).png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <header>
+            <img src="ESC.(3).png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="social.html">Socials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <div class="overlay">
+                    <h2 class="title">Instagram</h2>
+                    <p class="copy">Description goes here</p>
+                    <a class="btn" href="https://www.instagram.com/esc.the.game/">View Instagram</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h2 class="title">Tiktok</h2>
+                    <p class="copy">Description goes here</p>
+                    <a class="btn" href="https://www.tiktok.com/@esc.the.game?lang=en">View Tiktok</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h2 class="title">X</h2>
+                    <p class="copy">X description goes here</p>
+                    <a class="btn" href="https://x.com/3scape_thegame">View X</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h2 class="title">YouTube</h2>
+                    <p class="copy">Description goes here</p>
+                    <a class="btn" href="https://www.youtube.com/channel/UC9KCTzzQiQMUfVsi1YEntvg">View YouTube</a>
+                </div>
+            </div>
+            <div class="full-width-card">
+                <h2 class="heading">Discord</h2>
+                <p class="description">Join the Discord Today!</p>
+                <a class="full-btn" href="https://discord.gg/CHAQ75ZZeG">Join</a>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2024 Esc. | The Game. All rights reserved.
+        </footer>
+    </body>
+    <style>
+body {
+    background-color: #1d1a20;
+    background-size: cover;
+    font-family: Righteous;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header img {
+    height: 80px;
+    margin-left: 40px;
+}
+
+header {
+    background-color: #0e0e0e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    z-index: 1000;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c83d3d;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80vw;
+    max-width: 1400px; /* Ensure the content is centered within a max width */
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 100px;
+    flex-grow: 1;
+    margin: 0 auto; /* Center the grid container */
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #1d1a20;
+    border: 3px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    border-color: #c83d3d;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.title {
+    color: #c83d3d;
+    margin: 0;
+}
+
+.copy {
+    color: white;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 80%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #ff1c1c;
+    color: white;
+}
+
+.full-width-card {
+    grid-column: 1 / -1;
+    height: 300px;
+    background-color: #1d1a20;
+    border: 3px solid #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.full-width-card:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    border-color: #c83d3d;
+}
+
+.full-width-card .heading {
+    color: #c83d3d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.full-width-card .description {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.full-width-card .full-btn {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.full-width-card .full-btn:hover {
+    background-color: #ff1c1c;
+}
+
+footer {
+    background-color: #0e0e0e;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 10px 0 black;
+}
+    </style>
+</html>
