@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home | King.Farooq
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+        <link rel="icon" type="image/x-icon" href="King.Farooq Logo.png">
+        <style>
+            body {
+                background-color: #171A21; /* Change this to match your webpage background */
+                margin: 0;
+                font-family: 'Righteous', sans-serif;
+                color: white;
+            }
+            .menu-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #171717;
+                padding: 10px 20px; /* Add padding to ensure the logo fits */
+                position: fixed;
+                top: 0;
+                width: 100%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+                z-index: 1000; /* Ensure it stays on top */
+            }
+            .menu-bar ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .menu-bar ul li {
+                position: relative;
+            }
+            .menu-bar ul li a {
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: block;
+                transition: background-color 0.3s ease; /* Smooth transition */
+            }
+            .menu-bar ul li a:hover {
+                background-color: #575757;
+            }
+            .menu-bar ul li:hover .dropdown {
+                display: block;
+            }
+            .dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #171717;
+                min-width: 150px;
+            }
+            .dropdown a {
+                padding: 10px;
+                white-space: nowrap;
+                transition: background-color 0.3s ease; /* Smooth transition */
+            }
+            .menu-bar .logo {
+                margin-left: auto; /* Push the logo to the right */
+                padding-right: 35px;
+            }
+            .menu-bar img {
+                width: 50px; /* Adjust the width as needed */
+                height: auto; /* Maintain aspect ratio */
+            }
+            .image-container {
+                text-align: center;
+                margin-top: 80px; /* Add margin to account for fixed menu bar */
+            }
+            .image-container img {
+                width: 100%;
+                max-width: 2560px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
+            }
+            .intro-box {
+                border: 2px solid white;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 20px auto;
+                width: 90%; /* Set width to 90% of the viewport */
+                max-width: 1200px; /* Set a maximum width */
+                background-color: #1e1e1e;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
+                transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+            }
+            .intro-box:hover {
+                transform: scale(1.05); /* Slightly increase the size */
+                border-color: #8D99AE; /* Change border color */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#AboutMe.html">About Me</a></li>
+                <li><a href="ContactMe.html">Contact Me</a></li>
+                <li>
+                    <a href="#link5">Projects</a>
+                    <div class="dropdown">
+                        <a href="#sublink1">Sublink 1</a>
+                        <a href="#sublink2">Sublink 2</a>
+                        <a href="#sublink3">Sublink 3</a>
+                    </div>
+                </li>
+            </ul>
+            <img src="King.Farooq Logo.png" alt="King.Farooq Logo" class="logo">
+        </div>
+
+        <div class="image-container">
+            <img src="King.Farooq Banner.png" alt="King.Farooq Banner">
+        </div>
+
+        <br>
+
+        <div class="intro-box">
+            <center>
+                <h3>
+                    Farooq M. Anwar
+                </h3>
+                <h2>
+                    Design | Program | Manage
+                </h2>
+                <p>
+                    I am a Junior at Innovation Academy. My interests include sports, cars, video games, and designing. I am majoring in I.T. and minoring in Engineering here at IA. Within these pathways, I have taken courses such as Intro to Software Technology, Fundamentals of Engineering, APCSP, Engineering Concepts, Embedded Computing, and Engineering Applications. I am always looking forward to new challenges and opportunities to learn.
+                </p>
+            </center>
+        </div>
+    </body>
+</html>
