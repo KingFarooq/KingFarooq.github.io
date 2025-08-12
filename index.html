@@ -1,81 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5; url=https://kingfarooq.github.io/portfolio/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="4; url=https://kingfarooq.github.io/portfolio/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting…</title>
 
-    <style>
-        :root {
-            --primary: #00f7ff;
-            --secondary: #ff00aa;
-            --dark: #0a0a14;
-            --darker: #05050a;
-            --light: #e0e0e0;
-            --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
-                         0 0 20px rgba(0, 247, 255, 0.6),
-                         0 0 30px rgba(0, 247, 255, 0.4);
-            --neon-glow-pink: 0 0 10px rgba(255, 0, 170, 0.8),
-                             0 0 20px rgba(255, 0, 170, 0.6),
-                             0 0 30px rgba(255, 0, 170, 0.4);
-            --font-main: 'Orbitron', sans-serif;
-            --font-secondary: 'Rajdhani', sans-serif;
-        }
+  <style>
+    :root {
+      --primary: #00f7ff;
+      --secondary: #ff00aa;
+      --dark: #0a0a14;
+      --darker: #05050a;
+      --light: #e0e0e0;
+      --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
+                   0 0 20px rgba(0, 247, 255, 0.6),
+                   0 0 30px rgba(0, 247, 255, 0.4);
+      --neon-glow-pink: 0 0 10px rgba(255, 0, 170, 0.8),
+                       0 0 20px rgba(255, 0, 170, 0.6),
+                       0 0 30px rgba(255, 0, 170, 0.4);
+      --font-main: 'Orbitron', sans-serif;
+      --font-secondary: 'Rajdhani', sans-serif;
+    }
 
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: var(--dark);
-            color: var(--light);
-            font-family: var(--font-secondary);
-            overflow-x: hidden;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+    body {
+      background: radial-gradient(circle at center, var(--darker), var(--dark) 80%);
+      color: var(--light);
+      font-family: var(--font-secondary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      opacity: 1;
+      transition: opacity 1s ease;
+      position: relative;
+    }
 
-        h1 {
-            font-family: var(--font-main);
-            font-size: 3rem;
-            color: var(--primary);
-            text-shadow: var(--neon-glow);
-            margin-bottom: 1rem;
-        }
+    body.fade-out {
+      opacity: 0;
+    }
 
-        p {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            text-shadow: var(--neon-glow-pink);
-        }
+    /* Animated glowing ring */
+    .ring {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 4px solid var(--primary);
+      border-radius: 50%;
+      box-shadow: var(--neon-glow);
+      animation: pulse 2.5s infinite alternate ease-in-out;
+    }
 
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-            text-shadow: var(--neon-glow);
-        }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.2); opacity: 0.4; }
+    }
 
-        a:hover {
-            color: var(--secondary);
-            text-shadow: var(--neon-glow-pink);
-        }
-    </style>
+    h1 {
+      font-family: var(--font-main);
+      font-size: 3rem;
+      color: var(--primary);
+      text-shadow: var(--neon-glow);
+      margin-bottom: 1rem;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      text-shadow: var(--neon-glow-pink);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: var(--neon-glow);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--secondary);
+      text-shadow: var(--neon-glow-pink);
+    }
+
+    /* Loading dots animation */
+    .dots::after {
+      content: '';
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      33% { content: '.'; }
+      66% { content: '..'; }
+      100% { content: '...'; }
+    }
+  </style>
+
+  <script>
+    setTimeout(() => {
+      document.body.classList.add('fade-out');
+    }, 3000); // fade starts before redirect
+  </script>
 </head>
 <body>
-    <h1>Redirecting...</h1>
-    <p>You will be taken to the new page in 5 seconds.<br>
-       If not, <a href="https://kingfarooq.github.io/portfolio/">click here</a>.</p>
+  <div class="ring"></div>
+  <h1>Redirecting<span class="dots"></span></h1>
+  <p>
+    Hang tight — you’ll be taken to the new page shortly.<br />
+    If nothing happens, <a href="https://kingfarooq.github.io/portfolio/">click here</a>.
+  </p>
 </body>
 </html>
