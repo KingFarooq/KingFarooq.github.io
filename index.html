@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5; url=https://example.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+
+    <style>
+        :root {
+            --primary: #00f7ff;
+            --secondary: #ff00aa;
+            --dark: #0a0a14;
+            --darker: #05050a;
+            --light: #e0e0e0;
+            --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
+                         0 0 20px rgba(0, 247, 255, 0.6),
+                         0 0 30px rgba(0, 247, 255, 0.4);
+            --neon-glow-pink: 0 0 10px rgba(255, 0, 170, 0.8),
+                             0 0 20px rgba(255, 0, 170, 0.6),
+                             0 0 30px rgba(255, 0, 170, 0.4);
+            --font-main: 'Orbitron', sans-serif;
+            --font-secondary: 'Rajdhani', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: var(--font-secondary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--font-main);
+            font-size: 3rem;
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            text-shadow: var(--neon-glow-pink);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: var(--neon-glow);
+        }
+
+        a:hover {
+            color: var(--secondary);
+            text-shadow: var(--neon-glow-pink);
+        }
+    </style>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>You will be taken to the new page in 5 seconds.<br>
+       If not, <a href="https://kingfarooq.github.io/portfolio/">click here</a>.</p>
+</body>
+</html>
